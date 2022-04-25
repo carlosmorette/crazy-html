@@ -24,9 +24,12 @@ tag: html ->
         tag: title ->
           childrens: "Hello World"
         end
-        tag: link ->
-          properties: [{"rel", "stylesheet"}, {"href", "./styles.css"}]
-        end
+        tag: style ->
+	      childrens: "
+	        .hello-world {
+	        color: #3E5BA9;
+	    }"
+	   end
     end
     tag: body ->
       childrens:

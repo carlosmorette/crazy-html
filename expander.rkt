@@ -18,7 +18,8 @@
        #'(begin
            (define out (open-output-file filename #:exists 'replace))
            (displayln "<!DOCTYPE html>" out)
-           (displayln program ... out)))]))
+           (displayln program ... out)
+           (close-output-port out)))]))
 
 (define-syntax (tag stx)
   (syntax-parse stx
